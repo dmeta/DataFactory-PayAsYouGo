@@ -39,6 +39,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "container",
+							"directory": "dirr",
 							"file": "input.txt"
 						}
 					}
@@ -49,6 +50,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "container",
+							"directory": "dirr",
 							"file": "input2.txt"
 						}
 					}
