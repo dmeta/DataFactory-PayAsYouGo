@@ -50,7 +50,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "container",
-							"directory": "dirr",
+							"directory": "dirr2",
 							"file": "input2.txt"
 						}
 					}
