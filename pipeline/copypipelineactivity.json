@@ -36,13 +36,21 @@
 				"inputs": [
 					{
 						"referenceName": "arquivo_binario",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "container",
+							"file": "input.txt"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "arquivo_binario",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "container",
+							"file": "input2.txt"
+						}
 					}
 				]
 			}
