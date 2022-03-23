@@ -61,14 +61,22 @@
 							{
 								"referenceName": "arquivo_binario",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"container": "container",
+									"directory": "dirr",
+									"file": "input.txt"
+								}
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "arquivo_binario",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"container": "container",
+									"directory": "dirr",
+									"file": "input2.txt"
+								}
 							}
 						]
 					}
@@ -92,13 +100,34 @@
 					"referenceName": "AzureDataLakeStorage",
 					"type": "LinkedServiceReference"
 				},
+				"parameters": {
+					"container": {
+						"type": "string"
+					},
+					"directory": {
+						"type": "string"
+					},
+					"file": {
+						"type": "string"
+					}
+				},
 				"annotations": [],
 				"type": "Binary",
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "input2.txt",
-						"fileSystem": "container"
+						"fileName": {
+							"value": "@dataset().file",
+							"type": "Expression"
+						},
+						"folderPath": {
+							"value": "@dataset().directory",
+							"type": "Expression"
+						},
+						"fileSystem": {
+							"value": "@dataset().container",
+							"type": "Expression"
+						}
 					}
 				}
 			},
