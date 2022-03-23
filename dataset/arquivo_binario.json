@@ -21,8 +21,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "input2.txt",
-				"fileSystem": "container"
+				"fileSystem": {
+					"value": "@dataset().containedataset().containerr",
+					"type": "Expression"
+				}
 			}
 		}
 	}
