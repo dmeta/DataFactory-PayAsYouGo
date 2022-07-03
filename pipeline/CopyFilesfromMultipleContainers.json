@@ -74,7 +74,11 @@
 									"type": "BinarySource",
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
-										"recursive": true
+										"recursive": true,
+										"deleteFilesAfterCompletion": true
+									},
+									"formatSettings": {
+										"type": "BinaryReadSettings"
 									}
 								},
 								"sink": {
@@ -91,14 +95,8 @@
 									"referenceName": "BinarySourceFileStore",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": {
-											"value": "@pipeline().parameters.SourceFileFolder",
-											"type": "Expression"
-										},
-										"directory": {
-											"value": "@concat(pipeline().parameters.SourceFileDirectory,'/',item().name)",
-											"type": "Expression"
-										}
+										"container": "damian",
+										"directory": "output"
 									}
 								}
 							],
@@ -107,14 +105,8 @@
 									"referenceName": "BinarySinkFileStore",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": {
-											"value": "@pipeline().parameters.DestinationFileFolder",
-											"type": "Expression"
-										},
-										"directory": {
-											"value": "@concat(pipeline().parameters.DestinationFileDirectory,'/',item().name)",
-											"type": "Expression"
-										}
+										"container": "damian",
+										"directory": "output"
 									}
 								}
 							]
