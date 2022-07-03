@@ -8,7 +8,7 @@
 		"parameters": {
 			"directory": {
 				"type": "string",
-				"defaultValue": "damian/input"
+				"defaultValue": "damian/input/"
 			},
 			"filee": {
 				"type": "string",
