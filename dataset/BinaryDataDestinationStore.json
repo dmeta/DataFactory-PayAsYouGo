@@ -10,7 +10,8 @@
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"folderPath": "damian/output"
 			}
 		}
 	}
