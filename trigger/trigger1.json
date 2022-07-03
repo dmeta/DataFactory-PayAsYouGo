@@ -1,0 +1,30 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyFilesfromMultipleContainers",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"SourceFileFolder": "damian",
+					"SourceFileDirectory": "input",
+					"DestinationFileFolder": "damian",
+					"DestinationFileDirectory": "output"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/damian/blobs/input",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/f16dc77c-f9f9-4fc0-921b-aef050bae448/resourceGroups/rg_damian/providers/Microsoft.Storage/storageAccounts/storagedamianpayasyougo",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
