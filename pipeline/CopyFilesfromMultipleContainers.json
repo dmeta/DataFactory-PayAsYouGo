@@ -21,11 +21,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": {
-								"value": "@pipeline().parameters.SourceFileDirectory",
+								"value": "@pipeline().parameters.SourceFileFolder",
 								"type": "Expression"
 							},
 							"directory": {
-								"value": "@concat(pipeline().parameters.SourceFileDirectory, '/', pipeline().parameters.SourceFileFolder)",
+								"value": "@pipeline().parameters.SourceFileDirectory",
 								"type": "Expression"
 							}
 						}
