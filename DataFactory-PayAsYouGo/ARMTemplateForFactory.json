@@ -14,6 +14,26 @@
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storagedamianpayasyougo.dfs.core.windows.net"
+		},
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileFolder": {
+			"type": "string",
+			"defaultValue": "damian"
+		},
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileDirectory": {
+			"type": "string",
+			"defaultValue": "input"
+		},
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileFolder": {
+			"type": "string",
+			"defaultValue": "damian"
+		},
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileDirectory": {
+			"type": "string",
+			"defaultValue": "output"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/f16dc77c-f9f9-4fc0-921b-aef050bae448/resourceGroups/rg_damian/providers/Microsoft.Storage/storageAccounts/storagedamianpayasyougo"
 		}
 	},
 	"variables": {
@@ -198,7 +218,7 @@
 											"storeSettings": {
 												"type": "AzureBlobFSReadSettings",
 												"recursive": true,
-												"deleteFilesAfterCompletion": false
+												"deleteFilesAfterCompletion": true
 											},
 											"formatSettings": {
 												"type": "BinaryReadSettings"
@@ -277,6 +297,41 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/BinarySourceFileStore')]",
 				"[concat(variables('factoryId'), '/datasets/BinarySinkFileStore')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "CopyFilesfromMultipleContainers",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"SourceFileFolder": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileFolder')]",
+							"SourceFileDirectory": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileDirectory')]",
+							"DestinationFileFolder": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileFolder')]",
+							"DestinationFileDirectory": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileDirectory')]"
+						}
+					}
+				],
+				"type": "BlobEventsTrigger",
+				"typeProperties": {
+					"blobPathBeginsWith": "/damian/blobs/input",
+					"ignoreEmptyBlobs": true,
+					"scope": "[parameters('trigger1_properties_typeProperties_scope')]",
+					"events": [
+						"Microsoft.Storage.BlobCreated"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/CopyFilesfromMultipleContainers')]"
 			]
 		}
 	]

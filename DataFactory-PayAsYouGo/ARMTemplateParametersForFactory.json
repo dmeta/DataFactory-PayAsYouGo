@@ -10,6 +10,21 @@
 		},
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://storagedamianpayasyougo.dfs.core.windows.net"
+		},
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileFolder": {
+			"value": "damian"
+		},
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileDirectory": {
+			"value": "input"
+		},
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileFolder": {
+			"value": "damian"
+		},
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileDirectory": {
+			"value": "output"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/f16dc77c-f9f9-4fc0-921b-aef050bae448/resourceGroups/rg_damian/providers/Microsoft.Storage/storageAccounts/storagedamianpayasyougo"
 		}
 	}
 }
