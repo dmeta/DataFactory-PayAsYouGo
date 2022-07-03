@@ -21,11 +21,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": {
-								"value": "@pipeline().parameters.SourceFileFolder",
+								"value": "@pipeline().parameters.SourceFileDirectory",
 								"type": "Expression"
 							},
 							"directory": {
-								"value": "@pipeline().parameters.SourceFileDirectory",
+								"value": "@pipeline().parameters.SourceFileFolder",
 								"type": "Expression"
 							}
 						}
@@ -102,17 +102,7 @@
 							"inputs": [
 								{
 									"referenceName": "BinarySourceFileStore",
-									"type": "DatasetReference",
-									"parameters": {
-										"container": {
-											"value": "@pipeline().parameters.SourceFileFolder",
-											"type": "Expression"
-										},
-										"directory": {
-											"value": "@concat(pipeline().parameters.SourceFileDirectory,'/',item().name)",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
