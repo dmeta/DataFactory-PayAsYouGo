@@ -31,7 +31,10 @@
 				"inputs": [
 					{
 						"referenceName": "AzureBlobFSSourceDatasetEntity",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"directory": "damian/input/*.txt"
+						}
 					}
 				],
 				"outputs": [

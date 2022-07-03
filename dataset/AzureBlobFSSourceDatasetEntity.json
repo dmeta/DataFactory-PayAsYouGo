@@ -10,7 +10,7 @@
 				"type": "string",
 				"defaultValue": "damian/input"
 			},
-			"file": {
+			"filee": {
 				"type": "string",
 				"defaultValue": "*.txt"
 			}
@@ -27,7 +27,7 @@
 				"firstRowAsHeader": false
 			},
 			"fileName": {
-				"value": "@dataset().file",
+				"value": "@dataset().filee",
 				"type": "Expression"
 			},
 			"folderPath": {
