@@ -10,9 +10,9 @@
 					"type": "PipelineReference"
 				},
 				"parameters": {
-					"SourceFileFolder": "damian",
+					"SourceFileContainer": "damian",
 					"SourceFileDirectory": "input",
-					"DestinationFileFolder": "damian",
+					"DestinationFileContainer": "damian",
 					"DestinationFileDirectory": "output"
 				}
 			}

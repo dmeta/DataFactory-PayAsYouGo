@@ -21,7 +21,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": {
-								"value": "@pipeline().parameters.SourceFileFolder",
+								"value": "@pipeline().parameters.SourceFileContainer",
 								"type": "Expression"
 							},
 							"directory": {
@@ -105,11 +105,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"container": {
-											"value": "@pipeline().parameters.SourceFileDirectory",
+											"value": "@pipeline().parameters.SourceFileContainer",
 											"type": "Expression"
 										},
 										"directory": {
-											"value": "@pipeline().parameters.SourceFileFolder",
+											"value": "@pipeline().parameters.SourceFileDirectory",
 											"type": "Expression"
 										}
 									}
@@ -121,11 +121,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"container": {
-											"value": "@pipeline().parameters.DestinationFileFolder",
+											"value": "@pipeline().parameters.DestinationFileContainer",
 											"type": "Expression"
 										},
 										"directory": {
-											"value": "@pipeline().parameters.DestinationFileFolder",
+											"value": "@pipeline().parameters.DestinationFileDirectory",
 											"type": "Expression"
 										}
 									}
@@ -137,7 +137,7 @@
 			}
 		],
 		"parameters": {
-			"SourceFileFolder": {
+			"SourceFileContainer": {
 				"type": "string",
 				"defaultValue": "/damian"
 			},
@@ -145,7 +145,7 @@
 				"type": "string",
 				"defaultValue": "/input"
 			},
-			"DestinationFileFolder": {
+			"DestinationFileContainer": {
 				"type": "string",
 				"defaultValue": "/damian"
 			},
