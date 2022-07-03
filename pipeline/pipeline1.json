@@ -20,6 +20,8 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"wildcardFolderPath": "damian/input",
+							"wildcardFileName": "*.txt",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -49,12 +51,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "destinationDelimitedText1",
-						"type": "DatasetReference",
-						"parameters": {
-							"container": "damian",
-							"folder": "input"
-						}
+						"referenceName": "sourceDelimitedText1",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
