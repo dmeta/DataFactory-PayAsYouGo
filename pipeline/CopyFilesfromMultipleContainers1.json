@@ -96,7 +96,10 @@
 							"inputs": [
 								{
 									"referenceName": "BinarySourceFileStore1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"filesystem": "damian"
+									}
 								}
 							],
 							"outputs": [
