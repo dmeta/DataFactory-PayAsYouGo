@@ -19,7 +19,7 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
-							"fileListPath": "damian/input/",
+							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -49,14 +49,22 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "sourceDelimitedText1",
-						"type": "DatasetReference"
+						"referenceName": "destinationDelimitedText1",
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "damian",
+							"folder": "input"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "destinationDelimitedText1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "damian",
+							"folder": "output"
+						}
 					}
 				]
 			}
