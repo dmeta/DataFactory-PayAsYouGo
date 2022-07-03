@@ -158,11 +158,11 @@
 								"type": "DatasetReference",
 								"parameters": {
 									"container": {
-										"value": "@pipeline().parameters.SourceFileFolder",
+										"value": "@pipeline().parameters.SourceFileDirectory",
 										"type": "Expression"
 									},
 									"directory": {
-										"value": "@pipeline().parameters.SourceFileDirectory",
+										"value": "@pipeline().parameters.SourceFileFolder",
 										"type": "Expression"
 									}
 								}
@@ -242,11 +242,11 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"container": {
-													"value": "@pipeline().parameters.SourceFileFolder",
+													"value": "@pipeline().parameters.SourceFileDirectory",
 													"type": "Expression"
 												},
 												"directory": {
-													"value": "@concat(pipeline().parameters.SourceFileDirectory,'/',item().name)",
+													"value": "@pipeline().parameters.SourceFileFolder",
 													"type": "Expression"
 												}
 											}
@@ -262,7 +262,7 @@
 													"type": "Expression"
 												},
 												"directory": {
-													"value": "@concat(pipeline().parameters.DestinationFileDirectory,'/')",
+													"value": "@pipeline().parameters.DestinationFileFolder",
 													"type": "Expression"
 												}
 											}
