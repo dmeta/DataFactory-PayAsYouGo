@@ -13,7 +13,17 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "filesystem"
+					},
+					{
+						"name": "directory"
+					},
+					{
+						"name": "filename"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "BinarySource",
