@@ -21,7 +21,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"filesystem": "damian",
-							"directory": "input"
+							"directoryy": "input"
 						}
 					},
 					"fieldList": [

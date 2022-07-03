@@ -10,7 +10,7 @@
 			"filesystem": {
 				"type": "string"
 			},
-			"directory": {
+			"directoryy": {
 				"type": "string"
 			}
 		},
@@ -20,7 +20,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "@dataset().directory",
+					"value": "@dataset().directoryy",
 					"type": "Expression"
 				},
 				"fileSystem": {
