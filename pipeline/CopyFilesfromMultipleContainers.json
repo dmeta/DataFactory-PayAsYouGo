@@ -127,10 +127,6 @@
 										"directory": {
 											"value": "@concat(pipeline().parameters.DestinationFileDirectory,'/')",
 											"type": "Expression"
-										},
-										"filename": {
-											"value": "@activity('EnumerateContainersList').output.childItems",
-											"type": "Expression"
 										}
 									}
 								}
