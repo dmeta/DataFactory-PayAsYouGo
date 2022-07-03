@@ -15,7 +15,7 @@
 			"type": "string",
 			"defaultValue": "https://storagedamianpayasyougo.dfs.core.windows.net"
 		},
-		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileFolder": {
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileContainer": {
 			"type": "string",
 			"defaultValue": "damian"
 		},
@@ -23,7 +23,7 @@
 			"type": "string",
 			"defaultValue": "input"
 		},
-		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileFolder": {
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileContainer": {
 			"type": "string",
 			"defaultValue": "damian"
 		},
@@ -68,14 +68,14 @@
 					"AzureDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage_properties_typeProperties_url')]"
 					},
-					"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileFolder": {
-						"value": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileFolder')]"
+					"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileContainer": {
+						"value": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileContainer')]"
 					},
 					"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileDirectory": {
 						"value": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileDirectory')]"
 					},
-					"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileFolder": {
-						"value": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileFolder')]"
+					"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileContainer": {
+						"value": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileContainer')]"
 					},
 					"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileDirectory": {
 						"value": "[parameters('trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileDirectory')]"

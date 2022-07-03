@@ -11,13 +11,13 @@
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://storagedamianpayasyougo.dfs.core.windows.net"
 		},
-		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileFolder": {
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileContainer": {
 			"value": "damian"
 		},
 		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_SourceFileDirectory": {
 			"value": "input"
 		},
-		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileFolder": {
+		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileContainer": {
 			"value": "damian"
 		},
 		"trigger1_properties_CopyFilesfromMultipleContainers_parameters_DestinationFileDirectory": {
