@@ -128,7 +128,7 @@
 													"value": "@activity('EnumerateContainersList').output.childItems",
 													"type": "Expression"
 												},
-												"deleteFilesAfterCompletion": false
+												"deleteFilesAfterCompletion": true
 											},
 											"formatSettings": {
 												"type": "BinaryReadSettings"
@@ -138,10 +138,7 @@
 											"type": "BinarySink",
 											"storeSettings": {
 												"type": "AzureBlobFSWriteSettings",
-												"copyBehavior": {
-													"value": "@utcnow()",
-													"type": "Expression"
-												}
+												"copyBehavior": "FlattenHierarchy"
 											}
 										},
 										"enableStaging": false
