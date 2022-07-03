@@ -51,17 +51,7 @@
 				"outputs": [
 					{
 						"referenceName": "BinaryDataDestinationStore",
-						"type": "DatasetReference",
-						"parameters": {
-							"Container": {
-								"value": "@pipeline().parameters.FolderPath_Destination",
-								"type": "Expression"
-							},
-							"Directory": {
-								"value": "@pipeline().parameters.Directory_Destination",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
