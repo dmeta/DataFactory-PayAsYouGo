@@ -217,7 +217,10 @@
 											"type": "BinarySource",
 											"storeSettings": {
 												"type": "AzureBlobFSReadSettings",
-												"recursive": true,
+												"fileListPath": {
+													"value": "@activity('EnumerateContainersList').output.childItems",
+													"type": "Expression"
+												},
 												"deleteFilesAfterCompletion": true
 											},
 											"formatSettings": {
