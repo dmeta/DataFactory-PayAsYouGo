@@ -20,7 +20,7 @@
 						"referenceName": "BinarySourceFileStore1",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "damian",
+							"filesystem": "damian",
 							"directory": "input"
 						}
 					},
