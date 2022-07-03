@@ -94,10 +94,7 @@
 									"type": "BinarySink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings",
-										"copyBehavior": {
-											"value": "@utcnow()",
-											"type": "Expression"
-										}
+										"copyBehavior": "FlattenHierarchy"
 									}
 								},
 								"enableStaging": false
