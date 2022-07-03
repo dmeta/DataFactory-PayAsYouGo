@@ -43,10 +43,7 @@
 				"inputs": [
 					{
 						"referenceName": "Binary1",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "damian"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
