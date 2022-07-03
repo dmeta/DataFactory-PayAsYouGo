@@ -58,11 +58,11 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/BinarySourceFileStore')]",
+			"name": "[concat(parameters('factoryName'), '/BinarySinkFileStore')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"description": "Connection to your source data store.",
+				"description": "Connection to your destination data store.",
 				"linkedServiceName": {
 					"referenceName": "AzureDataLakeStorage",
 					"type": "LinkedServiceReference"
@@ -96,11 +96,11 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/BinarySinkFileStore')]",
+			"name": "[concat(parameters('factoryName'), '/BinarySourceFileStore')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"description": "Connection to your destination data store.",
+				"description": "Connection to your source data store.",
 				"linkedServiceName": {
 					"referenceName": "AzureDataLakeStorage",
 					"type": "LinkedServiceReference"
@@ -231,7 +231,10 @@
 											"type": "BinarySink",
 											"storeSettings": {
 												"type": "AzureBlobFSWriteSettings",
-												"copyBehavior": "PreserveHierarchy"
+												"copyBehavior": {
+													"value": "@utcnow()",
+													"type": "Expression"
+												}
 											}
 										},
 										"enableStaging": false
