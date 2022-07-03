@@ -3,20 +3,7 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "CopyFilesfromMultipleContainers",
-					"type": "PipelineReference"
-				},
-				"parameters": {
-					"SourceFileContainer": "damian",
-					"SourceFileDirectory": "input",
-					"DestinationFileContainer": "damian",
-					"DestinationFileDirectory": "output"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/damian/blobs/input",
