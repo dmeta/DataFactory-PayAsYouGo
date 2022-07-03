@@ -21,19 +21,8 @@
 						"type": "BinarySource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
-							"recursive": true,
-							"modifiedDatetimeStart": {
-								"value": "@{pipeline().parameters.LastModified_From}",
-								"type": "Expression"
-							},
-							"modifiedDatetimeEnd": {
-								"value": "@{pipeline().parameters.LastModified_To}",
-								"type": "Expression"
-							},
-							"wildcardFileName": {
-								"value": "*",
-								"type": "Expression"
-							}
+							"fileListPath": "damian/input",
+							"deleteFilesAfterCompletion": false
 						},
 						"formatSettings": {
 							"type": "BinaryReadSettings"
@@ -52,10 +41,6 @@
 						"referenceName": "BinaryDataSourceStore",
 						"type": "DatasetReference",
 						"parameters": {
-							"Container": {
-								"value": "@pipeline().parameters.FolderPath_Source",
-								"type": "Expression"
-							},
 							"Directory": {
 								"value": "@pipeline().parameters.Directory_Source",
 								"type": "Expression"
@@ -81,32 +66,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"FolderPath_Source": {
-				"type": "String",
-				"defaultValue": "sourcefolder"
-			},
-			"Directory_Source": {
-				"type": "String",
-				"defaultValue": "subfolder"
-			},
-			"FolderPath_Destination": {
-				"type": "String",
-				"defaultValue": "destinationfolder"
-			},
-			"Directory_Destination": {
-				"type": "String",
-				"defaultValue": "subfolder"
-			},
-			"LastModified_From": {
-				"type": "String",
-				"defaultValue": "2019-02-01T00:00:00Z"
-			},
-			"LastModified_To": {
-				"type": "String",
-				"defaultValue": "2019-03-01T00:00:00Z"
-			}
-		},
 		"annotations": []
 	}
 }
