@@ -10,7 +10,7 @@
 			"filesystem": {
 				"type": "string"
 			},
-			"directory": {
+			"directoryy": {
 				"type": "string"
 			}
 		},
