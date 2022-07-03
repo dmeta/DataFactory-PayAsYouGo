@@ -1,0 +1,39 @@
+{
+	"name": "AzureBlobFSSourceDatasetEntity",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"directory": {
+				"type": "string",
+				"defaultValue": "damian/input"
+			},
+			"file": {
+				"type": "string",
+				"defaultValue": "*.txt"
+			}
+		},
+		"annotations": [],
+		"type": "AzureBlobFSFile",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": {
+				"value": "@dataset().file",
+				"type": "Expression"
+			},
+			"folderPath": {
+				"value": "@dataset().directory",
+				"type": "Expression"
+			}
+		}
+	}
+}
