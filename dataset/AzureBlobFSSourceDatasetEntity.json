@@ -27,7 +27,7 @@
 				"firstRowAsHeader": false
 			},
 			"fileName": {
-				"value": "@dataset().filee",
+				"value": "@dataset().filename",
 				"type": "Expression"
 			},
 			"folderPath": {
