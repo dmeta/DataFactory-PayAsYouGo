@@ -8,11 +8,11 @@
 		"parameters": {
 			"directory": {
 				"type": "string",
-				"defaultValue": "damian/input/"
+				"defaultValue": "damian"
 			},
-			"filee": {
+			"filename": {
 				"type": "string",
-				"defaultValue": "*.txt"
+				"defaultValue": "input"
 			}
 		},
 		"annotations": [],
